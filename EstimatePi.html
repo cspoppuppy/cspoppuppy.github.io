@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - EstimatePI</title>
+  <link rel="stylesheet" href="./EstimatePI.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1> Estimate Pi </h1>
+
+<h4>Estimate Pi using Monte Carlo Method</h4>
+
+<p>
+  S<sub>square</sub>=L*L
+  <br>
+  S<sub>circle</sub>=Pi*(L/2)<sup>2</sup>
+  <br><br>
+  Draw random dots, with sufficient dots, the probability of dots appearing in the circle approaximately equals the area of the circle within the area of the square:
+  <br><br>
+  N<sub>circle</sub> (number of dots in circle) &frasl; N<sub>square</sub> (number of dots in square) &asymp; S<sub>circle</sub> &frasl; S<sub>square</sub> = (Pi*(L/2)<sup>2</sup>) &frasl; (L*L)
+<br><br>
+=> Pi = N<sub>circle</sub> &frasl; N<sub>square</sub> *4
+<br><br>
+</p>
+
+<label for="dotNum">number of dots</label>
+<input type="number" id="dotNum" name="dotNum" value=20000> 
+<button onclick="estimatePIVal()">Refresh</button>
+<br><br>
+
+<label for="piVal">Estimated Pi value</label>
+<input type="number" id="piVal" name="piVal" disabled> 
+<button onclick="initCanvas()">Clear</button>
+<br><br>
+
+<br><br>
+
+<canvas width="400" height="400" id="EstPI"></canvans>
+<!-- partial -->
+  <script  src="./EstimatePI.js"></script>
+
+</body>
+</html>
