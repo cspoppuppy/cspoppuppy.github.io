@@ -26,11 +26,16 @@ body {
 
 .navbar a {
   float: left;
+  display: block;
   font-size: 16px;
   color: #ddd;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+}
+
+.navbar .icon {
+  display: none;
 }
 
 .dropdown {
@@ -82,7 +87,9 @@ body {
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
-  /*.navbar a:not(:first-child) {display: none;}*/
+  .navbar a, .dropdown .dropbtn {
+    display: none;
+  }
   .navbar a.icon {
     float: left;
     display: block;
@@ -93,8 +100,8 @@ body {
 @media screen and (max-width: 600px) {
   .navbar.responsive {position: relative;}
   .navbar.responsive a.icon {
-    position: absolute;
-    right: 0;
+    position: relative;
+    left: 0;
     top: 0;
   }
   .navbar.responsive a {
