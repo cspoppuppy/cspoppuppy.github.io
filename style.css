@@ -2,14 +2,18 @@ body {
   background-image: url('https://cspoppuppy.github.io/cspoppuppy.github.io/images/apollo08_earthrise.jpg');
   /* Background image is centered vertically and horizontally at all times */
   background-position: center center;
+  
   /* Background image doesn't tile */
   background-repeat: no-repeat;
+  
   /* Background image is fixed in the viewport so that it doesn't move when 
      the content's height is greater than the image's height */
   background-attachment: fixed;
+  
   /* This is what makes the background image rescale based
      on the container's size */
   background-size: cover;
+  
   /* Set a background color that will be displayed
      while the background image is loading */
   background-color: #464646;
@@ -23,7 +27,7 @@ body {
 .navbar a {
   float: left;
   display: block;
-  font-size: 16px;
+  font-size: 18px;
   color: #ddd;
   text-align: center;
   padding: 14px 16px;
@@ -40,7 +44,7 @@ body {
 }
 
 .dropdown .dropbtn {
-  font-size: 16px;  
+  font-size: 18px;  
   border: none;
   outline: none;
   color: #ddd;
@@ -120,6 +124,7 @@ body {
   bottom: 0;
   width: 100%;
   /*background-color: red;*/
+  font-size: 14px;
   color: black;
   text-align: center;
 }
