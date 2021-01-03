@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Noughts and Crosses 2</title>
+  <link rel="stylesheet" href="./OandX.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<header><h1> Noughts and Crosses </h1></header>
+<div class="setting">
+  <form>
+    <label class="radio-inline">
+      <input type="radio" id="o" name="symbol" onclick="startGame()">O
+    </label>
+    <label class="radio-inline">
+      <input type="radio" id="x" name="symbol" onclick="startGame()">X
+    </label>
+  </form>
+    <br>  
+</div>
+<div class="board" id="board">
+  <div class="cell" data-cell></div>
+  <div class="cell" data-cell></div>
+  <div class="cell" data-cell></div>
+  <div class="cell" data-cell></div>
+  <div class="cell" data-cell></div>
+  <div class="cell" data-cell></div>
+  <div class="cell" data-cell></div>
+  <div class="cell" data-cell></div>
+  <div class="cell" data-cell></div>
+</div>
+<div class="winning-message" id="winningMessage">
+  <div data-winning-message-text></div>
+  <button id="restartButton">Restart</button>
+</div>
+<!-- partial -->
+  <script  src="./OandX.js"></script>
+
+</body>
+</html>
