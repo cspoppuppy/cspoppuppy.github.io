@@ -121,12 +121,16 @@ function computerMove() {
   if (isGameOver) {
     return;
   }
-  // move to random empty position
+  // move to winning position or random empty position
   const avail=cells.filter(index => !occupied.includes(index));
-  const randomPos=avail[Math.floor(Math.random()*avail.length)];
-  computer.move(cellElements[randomPos],occupied);
-  //occupied.push(randomPos);
-  //alert(occupied)
+  let nextPos=winningPos(avail);
+  if (nextPos==-1) {
+    nextPos=losingPos(avail);
+    if (nextPos==-1) {
+      nextPos=avail[Math.floor(Math.random()*avail.length)];
+    }
+  }
+  computer.move(cellElements[nextPos],occupied);
   const status=computer.gameStatus(occupied);
   if (status!="") {
     endGame(status, false);
@@ -141,4 +145,72 @@ function endGame(status, isPlayer) {
   }
   winningMessageElement.classList.add('show');
   isGameOver=true;
+}
+
+function winningPos(avail) {
+  computerOccupied=[]
+  if (occupied.length<3) {
+    return -1
+  }  
+  if (occupied.length%2==0) {
+    for (i=0;i<occupied.length;i++) {
+      if (i%2==0) {
+        computerOccupied.push(occupied[i]);
+      }
+    }
+  } else {
+    for (i=0;i<occupied.length;i++) {
+      if (i%2==1) {
+        computerOccupied.push(occupied[i]);
+      }
+    }
+  }
+  // test winning move
+  for (i=0; i<avail.length;i++) {
+    computerOccupied.push(avail[i]);
+    win = WINNING_COMBINATIONS.some(combination => {
+    return combination.every(index => {
+      return computerOccupied.includes(index);
+    });
+  });
+    if (win) {
+      return avail[i];
+    }
+    computerOccupied.pop();
+  }
+  return -1;
+}
+
+function losingPos(avail) {
+  playerOccupied=[]
+  if (occupied.length<3) {
+    return -1
+  }  
+  if (occupied.length%2==0) {
+    for (i=0;i<occupied.length;i++) {
+      if (i%2==1) {
+        playerOccupied.push(occupied[i]);
+      }
+    }
+  } else {
+    for (i=0;i<occupied.length;i++) {
+      if (i%2==0) {
+        playerOccupied.push(occupied[i]);
+      }
+    }
+  }
+  // test winning move
+  for (i=0; i<avail.length;i++) {
+    playerOccupied.push(avail[i]);
+    win = WINNING_COMBINATIONS.some(combination => {
+    return combination.every(index => {
+      return playerOccupied.includes(index);
+    });
+  });
+    if (win) {
+      return avail[i];
+    }
+    playerOccupied.pop();
+  }
+  return -1;
 }
