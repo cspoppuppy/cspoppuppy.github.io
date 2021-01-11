@@ -2,7 +2,7 @@ const X_CLASS="x";
 const O_CLASS="o";
 const cellElements=document.querySelectorAll('[data-cell]');
 const board=document.getElementById("board");
-const cells=[...Array(9).keys()]
+const cells=[...Array(9).keys()];
 const WINNING_COMBINATIONS = [
   [0,1,2],
   [3,4,5],
@@ -19,80 +19,27 @@ const restartButton = document.getElementById("restartButton");
 let isGameOver=true;
 const oRadio = document.getElementById("o");
 const xRadio = document.getElementById("x");
-
-
-class Player {
-  constructor(symbol) {
-    this.symbol=symbol;
-  }
   
-  symbol() {
-    return this.symbol;  
-  }
-  
-  setBoard() {
-    // set board
-    board.classList.remove(X_CLASS);
-    board.classList.remove(O_CLASS);
-    board.classList.add(this.symbol);
-  }
-  
-  move(cell,occupied) {
-    const cellIdx=Array.from(cellElements).indexOf(cell);
-    if (occupied.includes(cellIdx)) {
-      return false;
-    }
-    cell.classList.add(this.symbol);
-    occupied.push(cellIdx);
-    return true;
-  }
-  
-  isWin() {
-    return WINNING_COMBINATIONS.some(combination => {
-    return combination.every(index => {
-      return cellElements[index].classList.contains(this.symbol);
-    });
-  });
-  }
-  
-  isDraw(occupied) {
-    return occupied.length==9? true : false;
-  }
-  
-  gameStatus(occupied) {
-    if (this.isWin()) {
-      return "win";
-    } else if (this.isDraw(occupied)) {
-      return "draw"
-    } else {
-      return "";
-    }
-  }
-}
-
-var player;
+var human;
 var computer;
-var occupied;
+var gameBoard;
 
-//startGame();
 restartButton.addEventListener('click',startGame);
 
 function startGame() {
   cellElements.forEach(cell => {
   cell.classList.remove(X_CLASS);
   cell.classList.remove(O_CLASS);
-  cell.addEventListener('click', playerMove, {once:true});
+  cell.addEventListener('click', humanMove, {once:true});
  });
   winningMessageElement.classList.remove('show');
   // set players
-  //o = document.getElementById("o");
-  playerSymbol=oRadio.checked?"o":"x";
-  computerSymbol=oRadio.checked?"x":"o";
-  player = new Player(playerSymbol);
-  computer = new Player(computerSymbol);
+  human = oRadio.checked?"o":"x";
+  computer = oRadio.checked?"x":"o";
   isGameOver=false;
-  player.setBoard();
+  setBoard(human);
   occupied=[];
+  gameBoard=Array.from(Array(9).keys());
   // randomly decide which player goes first
   if (Math.floor(Math.random()*100)%2==0) {
     alert("Computer goes first!")
@@ -102,13 +49,22 @@ function startGame() {
   }
 }
 
-function playerMove(e) {
+// set board (hover over)
+function setBoard(player) {
+  // set board
+  board.classList.remove(X_CLASS);
+  board.classList.remove(O_CLASS);
+  board.classList.add(player);
+}
+
+// human player move if click on empty position
+function humanMove(e) {
   if (isGameOver) {
     return;
   }
   const cell=e.target;
-  if (player.move(cell,occupied)) {
-    const status=player.gameStatus(occupied);
+  if (move(human, cell)) {
+    const status=gameStatus(human, computer, gameBoard);
     if (status!="") {
       endGame(status, true);
     } else {
@@ -117,100 +73,137 @@ function playerMove(e) {
   }
 }
 
+// Computer move according to algorithm
 function computerMove() {
   if (isGameOver) {
     return;
   }
-  // move to winning position or random empty position
-  const avail=cells.filter(index => !occupied.includes(index));
-  let nextPos=winningPos(avail);
-  if (nextPos==-1) {
-    nextPos=losingPos(avail);
-    if (nextPos==-1) {
-      nextPos=avail[Math.floor(Math.random()*avail.length)];
-    }
+  
+  // move to best position
+  let nextPos;
+  if (availPos(gameBoard).length==9) {
+    // if empty board, move to corner positions
+    nextPos=[0, 2, 6, 8][Math.floor(Math.random()*4)]
+  } else {
+    nextPos=bestPos();
   }
-  computer.move(cellElements[nextPos],occupied);
-  const status=computer.gameStatus(occupied);
+  //alert(nextPos)
+  move(computer, cellElements[nextPos]);
+  const status=gameStatus(computer, human, gameBoard);
   if (status!="") {
     endGame(status, false);
   }
 }
 
-function endGame(status, isPlayer) {
+// Make the move, and log to gameBoard
+function move(player, cell) {
+  const cellIdx=Array.from(cellElements).indexOf(cell);
+  if (typeof gameBoard[cellIdx]!="number") {
+    return false;
+  }
+  cell.classList.add(player);
+  gameBoard[cellIdx]=player;
+  return true;
+}
+
+// minimax algorithm
+function minimax(player, opponent, testBoard) {
+	var avail = availPos(testBoard);
+  var status = gameStatus(player, opponent, testBoard);
+  
+  if ((player==computer && status=="win") || (player==human && status=='lost')) {
+    return {score: 10};
+  } else if ((player==human && status=="win") || (player==computer && status=='lost')) {
+    return {score: -10};
+  } else if (avail.length == 0) {
+    return {score: 0};
+  }
+
+	var moves = [];
+	for (var i = 0; i < avail.length; i++) {
+		var move = {};
+		move.pos = testBoard[avail[i]];
+		testBoard[avail[i]] = player;
+    
+    var result = minimax(opponent, player, testBoard);
+    move.score = result.score;
+		testBoard[avail[i]] = move.pos;
+
+		moves.push(move);
+	}
+
+	var bestMove;
+	if(player === computer) {
+		var bestScore = -10000;
+		for(var i = 0; i < moves.length; i++) {
+			if (moves[i].score > bestScore) {
+				bestScore = moves[i].score;
+				bestMove = i;
+			}
+		}
+	} else {
+		var bestScore = 10000;
+		for(var i = 0; i < moves.length; i++) {
+			if (moves[i].score < bestScore) {
+				bestScore = moves[i].score;
+				bestMove = i;
+			}
+		}
+	}
+	return moves[bestMove];
+}
+
+function bestPos() {
+  return minimax(computer, human, gameBoard).pos;
+  //return minimax(computer, gameBoard).index;
+}
+
+// position not taken by players
+function availPos(baord) {
+	return baord.filter(s => typeof s == 'number');
+}
+
+// check if player win
+function checkWin(player, board) {
+  let playerOccupied = board.reduce((a, e, i) => (e==player) ?  a.concat(i) : a, []);
+  // true or false
+  return WINNING_COMBINATIONS.some(combination => {
+    return combination.every(index => {
+      return playerOccupied.includes(index);
+    });
+  });
+}
+
+// check if it is draw
+function checkDraw(board) {
+  if (availPos(board).length == 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// games status: win, draw, nothing
+function gameStatus(player, opponent, board) {
+  // games status
+  if (checkWin(player, board)) {
+    return "win";
+  } else if (checkWin(opponent, board)) {
+    return "lost"
+  } else if (checkDraw(board)) {
+    return "draw"
+  } else {
+    return "";
+  }
+}
+
+// end the game with messages
+function endGame(status, isHuman) {
   if (status=="win") {
-    winningMessageTextElement.innerText = `${isPlayer? "You win!" : "Better luck next time!"}`;
+    winningMessageTextElement.innerText = `${isHuman? "You win!" : "Better luck next time!"}`;
   } else {
     winningMessageTextElement.innerText = "Draw!";
   }
   winningMessageElement.classList.add('show');
   isGameOver=true;
-}
-
-function winningPos(avail) {
-  computerOccupied=[]
-  if (occupied.length<3) {
-    return -1
-  }  
-  if (occupied.length%2==0) {
-    for (i=0;i<occupied.length;i++) {
-      if (i%2==0) {
-        computerOccupied.push(occupied[i]);
-      }
-    }
-  } else {
-    for (i=0;i<occupied.length;i++) {
-      if (i%2==1) {
-        computerOccupied.push(occupied[i]);
-      }
-    }
-  }
-  // test winning move
-  for (i=0; i<avail.length;i++) {
-    computerOccupied.push(avail[i]);
-    win = WINNING_COMBINATIONS.some(combination => {
-    return combination.every(index => {
-      return computerOccupied.includes(index);
-    });
-  });
-    if (win) {
-      return avail[i];
-    }
-    computerOccupied.pop();
-  }
-  return -1;
-}
-
-function losingPos(avail) {
-  playerOccupied=[]
-  if (occupied.length<3) {
-    return -1
-  }  
-  if (occupied.length%2==0) {
-    for (i=0;i<occupied.length;i++) {
-      if (i%2==1) {
-        playerOccupied.push(occupied[i]);
-      }
-    }
-  } else {
-    for (i=0;i<occupied.length;i++) {
-      if (i%2==0) {
-        playerOccupied.push(occupied[i]);
-      }
-    }
-  }
-  // test winning move
-  for (i=0; i<avail.length;i++) {
-    playerOccupied.push(avail[i]);
-    win = WINNING_COMBINATIONS.some(combination => {
-    return combination.every(index => {
-      return playerOccupied.includes(index);
-    });
-  });
-    if (win) {
-      return avail[i];
-    }
-    playerOccupied.pop();
-  }
-  return -1;
 }
