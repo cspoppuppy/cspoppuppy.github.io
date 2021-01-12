@@ -108,17 +108,18 @@ function move(player, cell) {
 
 // minimax algorithm
 function minimax(player, opponent, testBoard) {
-	var avail = availPos(testBoard);
   var status = gameStatus(player, opponent, testBoard);
   
   if ((player==computer && status=="win") || (player==human && status=='lost')) {
     return {score: 10};
   } else if ((player==human && status=="win") || (player==computer && status=='lost')) {
     return {score: -10};
-  } else if (avail.length == 0) {
+  //} else if (avail.length == 0) {
+  } else if (status == "draw") {
     return {score: 0};
   }
 
+  var avail = availPos(testBoard);
 	var moves = [];
 	for (var i = 0; i < avail.length; i++) {
 		var move = {};
