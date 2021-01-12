@@ -1,14 +1,15 @@
+// get HTML canvas by id
+const canvas=document.getElementById("EstPI");
+// context 2D
+const ctx=canvas.getContext("2d");
+document.getElementById("counter").value=0;
+document.getElementById("avg").value=0;
+
 // Load window
 window.onload=estimatePIVal();
 
 // Initiate canvas
 function initCanvas() {
-
-  // get HTML canvas by id
-  const canvas=document.getElementById("EstPI");
-  // context 2D
-  const ctx=canvas.getContext("2d");
-
   // get canvas length for drawing
   const L=canvas.width;
   
@@ -27,14 +28,17 @@ function initCanvas() {
   
 }
 
+function clearBoard() {
+  initCanvas();
+  // reset values
+  document.getElementById("counter").value=0;
+  document.getElementById("avg").value=0;
+}
+
 // Estimate PI value
 function estimatePIVal () {
   // Clear canvas
   initCanvas();
-  // get HTML canvas by id
-  const canvas=document.getElementById("EstPI");
-  // context 2D
-  const ctx=canvas.getContext("2d");
 
   // get canvas length for drawing
   const L=canvas.width;
@@ -58,9 +62,16 @@ function estimatePIVal () {
   }
 
   // Estimate Pi value
-  estimatePI=inCircleCnt*4/dotCnt;
- // write value to output box
- document.getElementById("piVal").value=estimatePI;
+  const estimatePI=inCircleCnt*4/dotCnt;
+  let counter=parseInt(document.getElementById("counter").value);
+  let avg=parseFloat(document.getElementById("avg").value);
+  // write value to output box
+  document.getElementById("piVal").value=estimatePI;
+  
+  avg=(avg*counter+estimatePI)/(counter+1);
+  counter+=1;
+  document.getElementById("avg").value=avg;
+  document.getElementById("counter").value=counter;
 }
 
 // draw circle on canvas
