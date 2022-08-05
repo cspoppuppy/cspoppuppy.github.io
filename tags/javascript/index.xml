@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JavaScript on </title>
-    <link>http://blog.github.io/tags/javascript/</link>
+    <link>https://shacheng.co.uk/tags/javascript/</link>
     <description>Recent content in JavaScript on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://blog.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://shacheng.co.uk/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Unbeatable Noughts &amp; Crosses</title>
-      <link>http://blog.github.io/2021/01/12/unbeatable-noughts-crosses/</link>
+      <link>https://shacheng.co.uk/2021/01/12/unbeatable-noughts-crosses/</link>
       <pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.github.io/2021/01/12/unbeatable-noughts-crosses/</guid>
+      <guid>https://shacheng.co.uk/2021/01/12/unbeatable-noughts-crosses/</guid>
       <description>The AI algorithm Minimax is used to decide the next best move in two player games like chess and go zero-sum games. It goes through all the possible moves between two players, and scores each simulated game result according to the end status:
  If the AI player wins, it is given a positive score If the opponent player wins, it is given a negative score If it is a draw, it is given score 0  The scores will be rolled up to their upper level nodes:</description>
     </item>
     
     <item>
       <title>Estimate Pi</title>
-      <link>http://blog.github.io/2020/12/30/estimate-pi/</link>
+      <link>https://shacheng.co.uk/2020/12/30/estimate-pi/</link>
       <pubDate>Wed, 30 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.github.io/2020/12/30/estimate-pi/</guid>
+      <guid>https://shacheng.co.uk/2020/12/30/estimate-pi/</guid>
       <description>Area of square: $$S_s = L*L$$
 Area of circle: $$S_c = Pi*(L/2)2$$
  Draw random dots, with sufficient dots, the probability of dots appearing in the circle approaximately equals the area of the circle within the area of the square:

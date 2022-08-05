@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title></title>
-    <link>http://blog.github.io/</link>
+    <link>https://shacheng.co.uk/</link>
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://blog.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://shacheng.co.uk/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How Computer Add Numbers</title>
-      <link>http://blog.github.io/2021/04/30/how-computer-add-numbers/</link>
+      <link>https://shacheng.co.uk/2021/04/30/how-computer-add-numbers/</link>
       <pubDate>Fri, 30 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.github.io/2021/04/30/how-computer-add-numbers/</guid>
+      <guid>https://shacheng.co.uk/2021/04/30/how-computer-add-numbers/</guid>
       <description>A hardware simulation of 4-bit numbers adder.
 How the addition operates in binary – example: 6 (A)+7 (B) = 13 (C):
  Below is a hardware logic diagram of a full adder, which is used to do 1-bit additions. It uses 5 logic gates, each made out of 4-6 transistors.
@@ -22,10 +22,10 @@ To operate 4-bit additions, it requires roughly 4 full adders connecting like be
     
     <item>
       <title>London Oyster Card - ER Model</title>
-      <link>http://blog.github.io/2021/04/07/london-oyster-card-er/</link>
+      <link>https://shacheng.co.uk/2021/04/07/london-oyster-card-er/</link>
       <pubDate>Wed, 07 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.github.io/2021/04/07/london-oyster-card-er/</guid>
+      <guid>https://shacheng.co.uk/2021/04/07/london-oyster-card-er/</guid>
       <description>Objective
 Record information:
 Basic user information: name, address Basic Oyster card information: card id, create date, card type, balance Trips: travel from, touch in date and time, travel to, touch out date and time, fare Dummy data
@@ -34,10 +34,10 @@ Basic user information: name, address Basic Oyster card information: card id, cr
     
     <item>
       <title>Sum Of Digits</title>
-      <link>http://blog.github.io/2021/03/07/sum-of-digits/</link>
+      <link>https://shacheng.co.uk/2021/03/07/sum-of-digits/</link>
       <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.github.io/2021/03/07/sum-of-digits/</guid>
+      <guid>https://shacheng.co.uk/2021/03/07/sum-of-digits/</guid>
       <description>Sum all the digits of number N (&amp;gt;0), if result has more than one digit, repeat summing all the digits of the result of each round, until reaching a single digit number R.
 For example:
 $$N = 365 =&amp;gt; 3 + 6 + 5 = 14 =&amp;gt; R = 1 + 4 = 5 $$
@@ -48,20 +48,20 @@ Represent each digit in N as a_{k}</description>
     
     <item>
       <title>Unbeatable Noughts &amp; Crosses</title>
-      <link>http://blog.github.io/2021/01/12/unbeatable-noughts-crosses/</link>
+      <link>https://shacheng.co.uk/2021/01/12/unbeatable-noughts-crosses/</link>
       <pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.github.io/2021/01/12/unbeatable-noughts-crosses/</guid>
+      <guid>https://shacheng.co.uk/2021/01/12/unbeatable-noughts-crosses/</guid>
       <description>The AI algorithm Minimax is used to decide the next best move in two player games like chess and go zero-sum games. It goes through all the possible moves between two players, and scores each simulated game result according to the end status:
  If the AI player wins, it is given a positive score If the opponent player wins, it is given a negative score If it is a draw, it is given score 0  The scores will be rolled up to their upper level nodes:</description>
     </item>
     
     <item>
       <title>Estimate Pi</title>
-      <link>http://blog.github.io/2020/12/30/estimate-pi/</link>
+      <link>https://shacheng.co.uk/2020/12/30/estimate-pi/</link>
       <pubDate>Wed, 30 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.github.io/2020/12/30/estimate-pi/</guid>
+      <guid>https://shacheng.co.uk/2020/12/30/estimate-pi/</guid>
       <description>Area of square: $$S_s = L*L$$
 Area of circle: $$S_c = Pi*(L/2)2$$
  Draw random dots, with sufficient dots, the probability of dots appearing in the circle approaximately equals the area of the circle within the area of the square:
@@ -73,20 +73,20 @@ Code in Github</description>
     
     <item>
       <title>Is 2021 A Prime Number?</title>
-      <link>http://blog.github.io/2020/12/23/is-2021-a-prime-number/</link>
+      <link>https://shacheng.co.uk/2020/12/23/is-2021-a-prime-number/</link>
       <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.github.io/2020/12/23/is-2021-a-prime-number/</guid>
+      <guid>https://shacheng.co.uk/2020/12/23/is-2021-a-prime-number/</guid>
       <description>A prime number is a positive integer that can only be exactly divided by itself and 1.
 Algorithm: to judge whether X is a prime number or not, we can assume a number n has n x n = X (n = sqrt(X)). If X is not prime, it will have at least one integer pair n1 and n2, such that n1 x n2 = X, n1∈[2,n], n2∈[n,X]. We can then narrow down the scope that if X is exactly divisible by a number between 2 and sqrt(X), it is not a prime; otherwise, it is a prime.</description>
     </item>
     
     <item>
       <title>Show N^M As Sum Of Consecutive N Odd Numbers</title>
-      <link>http://blog.github.io/2020/12/23/sum-of-consecutive-odd-numbers/</link>
+      <link>https://shacheng.co.uk/2020/12/23/sum-of-consecutive-odd-numbers/</link>
       <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.github.io/2020/12/23/sum-of-consecutive-odd-numbers/</guid>
+      <guid>https://shacheng.co.uk/2020/12/23/sum-of-consecutive-odd-numbers/</guid>
       <description>Split n^m into n numbers, the average of the numbers would be n^{m-1}.
 If n is odd, we can produce the consecutive odd numbers {…n^{m-1}-4, n^{m-1}-2, n^{m-1}, n^{m-1}+2, n^{m-1}+4…}. For example, for 3^3, it will be {7, 9, 11}.
 If n is even, we can produce the consecutive odd numbers {…n^{m-1}-5, n^{m-1}-3, n^{m-1}-1, n^{m-1}+1, n^{m-1}+3, n^{m-1}+5…}. For example, for 4^3, it will be {13, 15, 17, 19}.
@@ -95,46 +95,46 @@ It can be written as:</description>
     
     <item>
       <title>Chinese Zither Tuning for Dummies</title>
-      <link>http://blog.github.io/2016/09/15/chinese-zither-tuning-for-dummies/</link>
+      <link>https://shacheng.co.uk/2016/09/15/chinese-zither-tuning-for-dummies/</link>
       <pubDate>Thu, 13 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.github.io/2016/09/15/chinese-zither-tuning-for-dummies/</guid>
+      <guid>https://shacheng.co.uk/2016/09/15/chinese-zither-tuning-for-dummies/</guid>
       <description>辅助工具： 钢琴，电子琴，或是下载个钢琴的手机 app (推荐个叫 Tiny Piano 的，音色跟古筝接近) 对照第一个表， 找出与每根弦相应的琴键， 根据琴键的声音调整琴弦</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://blog.github.io/about/</link>
+      <link>https://shacheng.co.uk/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.github.io/about/</guid>
+      <guid>https://shacheng.co.uk/about/</guid>
       <description>About Me </description>
     </item>
     
     <item>
       <title></title>
-      <link>http://blog.github.io/demo/</link>
+      <link>https://shacheng.co.uk/demo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.github.io/demo/</guid>
+      <guid>https://shacheng.co.uk/demo/</guid>
       <description>News Summary Noughts and Crosses / Tic Tac Toe Estimate Pi </description>
     </item>
     
     <item>
       <title></title>
-      <link>http://blog.github.io/search/placeholder/</link>
+      <link>https://shacheng.co.uk/search/placeholder/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.github.io/search/placeholder/</guid>
+      <guid>https://shacheng.co.uk/search/placeholder/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Posts Archive</title>
-      <link>http://blog.github.io/archive/</link>
+      <link>https://shacheng.co.uk/archive/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.github.io/archive/</guid>
+      <guid>https://shacheng.co.uk/archive/</guid>
       <description></description>
     </item>
     

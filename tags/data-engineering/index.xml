@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Data Engineering on </title>
-    <link>http://blog.github.io/tags/data-engineering/</link>
+    <link>https://shacheng.co.uk/tags/data-engineering/</link>
     <description>Recent content in Data Engineering on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://blog.github.io/tags/data-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://shacheng.co.uk/tags/data-engineering/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>London Oyster Card - ER Model</title>
-      <link>http://blog.github.io/2021/04/07/london-oyster-card-er/</link>
+      <link>https://shacheng.co.uk/2021/04/07/london-oyster-card-er/</link>
       <pubDate>Wed, 07 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.github.io/2021/04/07/london-oyster-card-er/</guid>
+      <guid>https://shacheng.co.uk/2021/04/07/london-oyster-card-er/</guid>
       <description>Objective
 Record information:
 Basic user information: name, address Basic Oyster card information: card id, create date, card type, balance Trips: travel from, touch in date and time, travel to, touch out date and time, fare Dummy data
