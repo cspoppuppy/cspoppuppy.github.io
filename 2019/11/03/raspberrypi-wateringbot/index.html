@@ -15,9 +15,9 @@
     
 
     
-    <meta name="title" content="Is 2021 A Prime Number?" />
-    <meta property="og:title" content="Is 2021 A Prime Number?" />
-    <meta property="twitter:title" content="Is 2021 A Prime Number?" />
+    <meta name="title" content="Raspberry Pi Watering Bot" />
+    <meta property="og:title" content="Raspberry Pi Watering Bot" />
+    <meta property="twitter:title" content="Raspberry Pi Watering Bot" />
     
 
     
@@ -34,9 +34,9 @@
     <meta name="keyword"  content="程莎, Sha Cheng, Data Engineer">
     <link rel="shortcut icon" href="/img/profile.jpeg">
 
-    <title>Is 2021 A Prime Number? | Sha Cheng</title>
+    <title>Raspberry Pi Watering Bot | Sha Cheng</title>
 
-    <link rel="canonical" href="/2020/12/23/is-2021-a-prime-number/">
+    <link rel="canonical" href="/2019/11/03/raspberrypi-wateringbot/">
 
     
     
@@ -172,16 +172,12 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/quiz" title="Quiz">
-                            Quiz
+                        <a class="tag" href="/tags/electronics" title="Electronics">
+                            Electronics
                         </a>
                         
-                        <a class="tag" href="/tags/math" title="Math">
-                            Math
-                        </a>
-                        
-                        <a class="tag" href="/tags/algorithm" title="Algorithm">
-                            Algorithm
+                        <a class="tag" href="/tags/raspberry-pi" title="Raspberry Pi">
+                            Raspberry Pi
                         </a>
                         
                         <a class="tag" href="/tags/python" title="Python">
@@ -189,7 +185,7 @@
                         </a>
                         
                     </div>
-                    <h1>Is 2021 A Prime Number?</h1>
+                    <h1>Raspberry Pi Watering Bot</h1>
                     <h2 class="subheading"></h2>
                     <span class="meta">
                         
@@ -198,7 +194,7 @@
                                 Sha Cheng
                              
                             on 
-                            Wednesday, December 23, 2020
+                            Sunday, November 3, 2019
                             
                             
                             
@@ -224,37 +220,47 @@
                 post-container">
 
                 
-                <p>A prime number is a positive integer that can only be exactly divided by itself and 1.</p>
-<p>Algorithm: to judge whether <code>X</code> is a prime number or not, we can assume a number n has <code>n x n = X</code> <code>(n = sqrt(X))</code>. If <code>X</code> is not prime, it will have at least one integer pair <code>n1</code> and <code>n2</code>, such that <code>n1 x n2 = X</code>, <code>n1∈[2,n]</code>, <code>n2∈[n,X]</code>. We can then narrow down the scope that if <code>X</code> is exactly divisible by a number between 2 and <code>sqrt(X)</code>, it is not a prime; otherwise, it is a prime.</p>
-<p><code>sqrt(2021) ≈ 44</code></p>
-<p>If we divide 2021 by integer between 2-44 one by one, we find <code>2021 ÷ 43 = 47</code>. Therefore, 2021 is not a prime.</p>
-<p>We can further refine the algorithm: <code>X</code> is exactly divisible by any prime number <code>n1, n1∈[2,n]</code>. Because all non prime numbers are ultimately divisible by some prime numbers smaller than itself.</p>
-<p>In the case of 2021, we can try whether it is divisible by 14 prime numbers only rather than all 43 numbers between 2 and 44..</p>
-<p>prime numbers between 2-44:</p>
+                <h4 id="v1---the-minimum-viable-product">V1 - The Minimum Viable Product</h4>
+<p><strong>Circuit Design</strong></p>
 <p>
-  <img src="/img/post/prime.png" alt="">
+  <img src="/img/post/watering-bot/Circuit.jpg" alt="">
 
 </p>
-<p>Alternatively, we can let the computer do the work:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">isPrime</span>(num):
-    <span style="color:#6272a4"># Invalid numbers</span>
-    <span style="color:#ff79c6">if</span> num<span style="color:#ff79c6">&lt;=</span><span style="color:#bd93f9">1</span> <span style="color:#ff79c6">or</span> num<span style="color:#ff79c6">!=</span><span style="color:#8be9fd;font-style:italic">int</span>(num): <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">False</span>
+<p><strong>Implementation</strong></p>
+<p>
+  <img src="/img/post/watering-bot/WaterBot.jpg" alt="">
 
-    <span style="color:#6272a4"># narrow down: numbers divisible by 2 or 3</span>
-    <span style="color:#ff79c6">if</span> num<span style="color:#ff79c6">&gt;</span><span style="color:#bd93f9">3</span>:
-        <span style="color:#ff79c6">if</span> num<span style="color:#ff79c6">%</span><span style="color:#bd93f9">6</span><span style="color:#ff79c6">!=</span><span style="color:#bd93f9">1</span> <span style="color:#ff79c6">and</span> num<span style="color:#ff79c6">%</span><span style="color:#bd93f9">6</span><span style="color:#ff79c6">!=</span><span style="color:#bd93f9">5</span>:
-            <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">False</span>
+</p>
+<p><strong>Features</strong></p>
+<ul>
+<li>Automatically water plant on schedule</li>
+<li>Enable extra watering using a switch</li>
+<li>Log watering history</li>
+</ul>
+<p><strong>Code</strong></p>
+<p><a href="https://github.com/cspoppuppy/IoT-WateringBot/blob/master/WaterPump.py">WaterPump.py</a></p>
+<hr>
+<h4 id="v2---water-level-detector">V2 - Water Level Detector</h4>
+<p><strong>Circuit Design</strong></p>
+<p><a href="">Missing</a></p>
+<p><strong>Code</strong></p>
+<p><a href="https://github.com/cspoppuppy/IoT-WateringBot/blob/master/WaterPump_v2.py">WaterPump_v2.py</a></p>
+<hr>
+<h4 id="v3---mobile-message-twilio">V3 - Mobile Message (Twilio)</h4>
+<p><strong>Code</strong></p>
+<p><a href="">Missing</a></p>
+<hr>
+<h4 id="v4---migrated-to-esp8266">V4 - Migrated to ESP8266</h4>
+<p><strong>Circuit Desgin</strong></p>
+<p><a href="">Missing</a></p>
+<p><strong>Extra Features</strong></p>
+<ul>
+<li>Soil Humidity Sensor</li>
+<li>Remote monitor and control via Blynk</li>
+</ul>
+<p><strong>Code</strong></p>
+<p><a href="">Missing</a></p>
 
-    <span style="color:#6272a4"># divide num by numbers between 2 and sqrt(num)</span>
-    sqrt<span style="color:#ff79c6">=</span><span style="color:#8be9fd;font-style:italic">int</span>(<span style="color:#8be9fd;font-style:italic">pow</span>(num, <span style="color:#bd93f9">0.5</span>))
-    <span style="color:#ff79c6">for</span> i <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(<span style="color:#bd93f9">2</span>, sqrt<span style="color:#ff79c6">+</span><span style="color:#bd93f9">1</span>):
-        <span style="color:#ff79c6">if</span> num<span style="color:#ff79c6">%</span>i<span style="color:#ff79c6">==</span><span style="color:#bd93f9">0</span>:
-            <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">False</span>
-
-    <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">True</span>
-
-<span style="color:#8be9fd;font-style:italic">print</span>(isPrime(<span style="color:#bd93f9">2021</span>))
-</code></pre></div>
 
                 
 
@@ -263,13 +269,13 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2020/12/23/sum-of-consecutive-odd-numbers/" data-toggle="tooltip" data-placement="top" title="Show N^M As Sum Of Consecutive N Odd Numbers">&larr;
+                        <a href="/2019/11/01/setup-raspberry-pi/" data-toggle="tooltip" data-placement="top" title="Setup Raspberry Pi (headless)">&larr;
                             Previous Post</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/2020/12/30/estimate-pi/" data-toggle="tooltip" data-placement="top" title="Estimate Pi">Next
+                        <a href="/2020/12/23/sum-of-consecutive-odd-numbers/" data-toggle="tooltip" data-placement="top" title="Show N^M As Sum Of Consecutive N Odd Numbers">Next
                             Post &rarr;</a>
                     </li>
                     

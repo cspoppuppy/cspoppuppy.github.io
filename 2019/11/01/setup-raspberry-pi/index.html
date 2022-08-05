@@ -15,9 +15,9 @@
     
 
     
-    <meta name="title" content="Is 2021 A Prime Number?" />
-    <meta property="og:title" content="Is 2021 A Prime Number?" />
-    <meta property="twitter:title" content="Is 2021 A Prime Number?" />
+    <meta name="title" content="Setup Raspberry Pi (headless)" />
+    <meta property="og:title" content="Setup Raspberry Pi (headless)" />
+    <meta property="twitter:title" content="Setup Raspberry Pi (headless)" />
     
 
     
@@ -34,9 +34,9 @@
     <meta name="keyword"  content="程莎, Sha Cheng, Data Engineer">
     <link rel="shortcut icon" href="/img/profile.jpeg">
 
-    <title>Is 2021 A Prime Number? | Sha Cheng</title>
+    <title>Setup Raspberry Pi (headless) | Sha Cheng</title>
 
-    <link rel="canonical" href="/2020/12/23/is-2021-a-prime-number/">
+    <link rel="canonical" href="/2019/11/01/setup-raspberry-pi/">
 
     
     
@@ -172,24 +172,16 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/quiz" title="Quiz">
-                            Quiz
+                        <a class="tag" href="/tags/electronics" title="Electronics">
+                            Electronics
                         </a>
                         
-                        <a class="tag" href="/tags/math" title="Math">
-                            Math
-                        </a>
-                        
-                        <a class="tag" href="/tags/algorithm" title="Algorithm">
-                            Algorithm
-                        </a>
-                        
-                        <a class="tag" href="/tags/python" title="Python">
-                            Python
+                        <a class="tag" href="/tags/raspberry-pi" title="Raspberry Pi">
+                            Raspberry Pi
                         </a>
                         
                     </div>
-                    <h1>Is 2021 A Prime Number?</h1>
+                    <h1>Setup Raspberry Pi (headless)</h1>
                     <h2 class="subheading"></h2>
                     <span class="meta">
                         
@@ -198,7 +190,7 @@
                                 Sha Cheng
                              
                             on 
-                            Wednesday, December 23, 2020
+                            Friday, November 1, 2019
                             
                             
                             
@@ -224,37 +216,53 @@
                 post-container">
 
                 
-                <p>A prime number is a positive integer that can only be exactly divided by itself and 1.</p>
-<p>Algorithm: to judge whether <code>X</code> is a prime number or not, we can assume a number n has <code>n x n = X</code> <code>(n = sqrt(X))</code>. If <code>X</code> is not prime, it will have at least one integer pair <code>n1</code> and <code>n2</code>, such that <code>n1 x n2 = X</code>, <code>n1∈[2,n]</code>, <code>n2∈[n,X]</code>. We can then narrow down the scope that if <code>X</code> is exactly divisible by a number between 2 and <code>sqrt(X)</code>, it is not a prime; otherwise, it is a prime.</p>
-<p><code>sqrt(2021) ≈ 44</code></p>
-<p>If we divide 2021 by integer between 2-44 one by one, we find <code>2021 ÷ 43 = 47</code>. Therefore, 2021 is not a prime.</p>
-<p>We can further refine the algorithm: <code>X</code> is exactly divisible by any prime number <code>n1, n1∈[2,n]</code>. Because all non prime numbers are ultimately divisible by some prime numbers smaller than itself.</p>
-<p>In the case of 2021, we can try whether it is divisible by 14 prime numbers only rather than all 43 numbers between 2 and 44..</p>
-<p>prime numbers between 2-44:</p>
-<p>
-  <img src="/img/post/prime.png" alt="">
+                <h2 id="prerequisite">Prerequisite</h2>
+<p>Download Raspbian image from <a href="https://www.raspberrypi.org/downloads/raspbian/">link</a> (I used Raspbian Buster Lite zip version, BanelaEtcher can write from zip)</p>
+<p>Download BanelaEtcher for writing image to micro SD from <a href="https://www.balena.io/etcher/">link</a></p>
+<p>Micro SD (Samsung 32GB with adapter) <a href="https://www.amazon.co.uk/Samsung-32GB-Memory-Micro-Adapter/dp/B06XFSZGCC/ref=asc_df_B06XFSZGCC/?tag=googshopuk-21&amp;linkCode=df0&amp;hvadid=311159021512&amp;hvpos=1o6&amp;hvnetw=g&amp;hvrand=10128662894325662004&amp;hvpone=&amp;hvptwo=&amp;hvqmt=&amp;hvdev=c&amp;hvdvcmdl=&amp;hvlocint=&amp;hvlocphy=9045957&amp;hvtargid=pla-319248166017&amp;psc=1">link</a></p>
+<h2 id="install-tools-in-your-pc-windows">Install tools in your PC (Windows):</h2>
+<p><a href="https://www.putty.org/">Putty (access Raspberry Pi headless using SSH)</a></p>
+<p><a href="https://support.apple.com/kb/DL999?locale=en_GB">Bonjour</a></p>
+<p><a href="https://notepad-plus-plus.org/downloads/">Notepad++</a></p>
+<h2 id="steps">Steps</h2>
+<h3 id="install-operating-system">Install operating system</h3>
+<ol>
+<li>
+<p>Plug SD card into computer (Win 10), use BanelaEtcher write Raspbian to micro SD</p>
+</li>
+<li>
+<p>Open micro SD, edit/add below files:</p>
+<ul>
+<li>Open config.txt in Notepad++, at the end, type &ldquo;dtoverlay=dwc2&rdquo;</li>
+<li>Open cmdline.txt in Notepad++, after &ldquo;rootwait&rdquo; (near the end), insert &quot; modules-load=dwc2,g_ether&quot;</li>
+<li>Create new Text Document (right click -&gt; New), rename as &ldquo;ssh&rdquo; and remove &ldquo;.txt&rdquo; file extension</li>
+</ul>
+</li>
+<li>
+<p>Eject SD card, plug into Raspberry Pi Zero w, connect the micro USB to computer using USB cable (non-OTG)</p>
+</li>
+</ol>
+<h3 id="access-pi">Access Pi</h3>
+<p><strong>Login</strong></p>
+<ol>
+<li>
+<p>Open Putty, enter Host Name &ldquo;<a href="mailto:pi@raspberrypi.local">pi@raspberrypi.local</a>&rdquo;, click button Open</p>
+</li>
+<li>
+<p>It will ask password for the pi, type &ldquo;raspberry&rdquo; + Enter</p>
+</li>
+<li>
+<p>Optional: for better practice, change password by type &ldquo;passwd&rdquo;+Enter, and follow the steps</p>
+</li>
+</ol>
+<p><strong>Connect to wifi</strong></p>
+<p>Type &ldquo;sudo raspi-config&rdquo; -&gt; select Network Options -&gt; Wifi, and follow the steps</p>
+<p><strong>Update system and drive</strong></p>
+<p>Run following command:
+&ldquo;sudo apt update&rdquo;
+&ldquo;sudo apt upgrade&rdquo;
+&ldquo;sudo rpi-update&rdquo;</p>
 
-</p>
-<p>Alternatively, we can let the computer do the work:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">isPrime</span>(num):
-    <span style="color:#6272a4"># Invalid numbers</span>
-    <span style="color:#ff79c6">if</span> num<span style="color:#ff79c6">&lt;=</span><span style="color:#bd93f9">1</span> <span style="color:#ff79c6">or</span> num<span style="color:#ff79c6">!=</span><span style="color:#8be9fd;font-style:italic">int</span>(num): <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">False</span>
-
-    <span style="color:#6272a4"># narrow down: numbers divisible by 2 or 3</span>
-    <span style="color:#ff79c6">if</span> num<span style="color:#ff79c6">&gt;</span><span style="color:#bd93f9">3</span>:
-        <span style="color:#ff79c6">if</span> num<span style="color:#ff79c6">%</span><span style="color:#bd93f9">6</span><span style="color:#ff79c6">!=</span><span style="color:#bd93f9">1</span> <span style="color:#ff79c6">and</span> num<span style="color:#ff79c6">%</span><span style="color:#bd93f9">6</span><span style="color:#ff79c6">!=</span><span style="color:#bd93f9">5</span>:
-            <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">False</span>
-
-    <span style="color:#6272a4"># divide num by numbers between 2 and sqrt(num)</span>
-    sqrt<span style="color:#ff79c6">=</span><span style="color:#8be9fd;font-style:italic">int</span>(<span style="color:#8be9fd;font-style:italic">pow</span>(num, <span style="color:#bd93f9">0.5</span>))
-    <span style="color:#ff79c6">for</span> i <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(<span style="color:#bd93f9">2</span>, sqrt<span style="color:#ff79c6">+</span><span style="color:#bd93f9">1</span>):
-        <span style="color:#ff79c6">if</span> num<span style="color:#ff79c6">%</span>i<span style="color:#ff79c6">==</span><span style="color:#bd93f9">0</span>:
-            <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">False</span>
-
-    <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">True</span>
-
-<span style="color:#8be9fd;font-style:italic">print</span>(isPrime(<span style="color:#bd93f9">2021</span>))
-</code></pre></div>
 
                 
 
@@ -263,13 +271,13 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2020/12/23/sum-of-consecutive-odd-numbers/" data-toggle="tooltip" data-placement="top" title="Show N^M As Sum Of Consecutive N Odd Numbers">&larr;
+                        <a href="/2016/09/15/chinese-zither-tuning-for-dummies/" data-toggle="tooltip" data-placement="top" title="Chinese Zither Tuning for Dummies">&larr;
                             Previous Post</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/2020/12/30/estimate-pi/" data-toggle="tooltip" data-placement="top" title="Estimate Pi">Next
+                        <a href="/2019/11/03/raspberrypi-wateringbot/" data-toggle="tooltip" data-placement="top" title="Raspberry Pi Watering Bot">Next
                             Post &rarr;</a>
                     </li>
                     

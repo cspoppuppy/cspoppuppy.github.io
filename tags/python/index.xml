@@ -17,5 +17,28 @@
 Algorithm: to judge whether X is a prime number or not, we can assume a number n has n x n = X (n = sqrt(X)). If X is not prime, it will have at least one integer pair n1 and n2, such that n1 x n2 = X, n1∈[2,n], n2∈[n,X]. We can then narrow down the scope that if X is exactly divisible by a number between 2 and sqrt(X), it is not a prime; otherwise, it is a prime.</description>
     </item>
     
+    <item>
+      <title>Raspberry Pi Watering Bot</title>
+      <link>https://shacheng.co.uk/2019/11/03/raspberrypi-wateringbot/</link>
+      <pubDate>Sun, 03 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://shacheng.co.uk/2019/11/03/raspberrypi-wateringbot/</guid>
+      <description>V1 - The Minimum Viable Product Circuit Design
+ Implementation
+ Features
+ Automatically water plant on schedule Enable extra watering using a switch Log watering history  Code
+WaterPump.py
+ V2 - Water Level Detector Circuit Design
+Missing
+Code
+WaterPump_v2.py
+ V3 - Mobile Message (Twilio) Code
+Missing
+ V4 - Migrated to ESP8266 Circuit Desgin
+Missing
+Extra Features
+ Soil Humidity Sensor Remote monitor and control via Blynk  Code</description>
+    </item>
+    
   </channel>
 </rss>

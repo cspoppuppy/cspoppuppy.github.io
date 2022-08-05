@@ -93,5 +93,43 @@ If n is even, we can produce the consecutive odd numbers {…n^{m-1}-5, n^{m-1}-
 It can be written as:</description>
     </item>
     
+    <item>
+      <title>Raspberry Pi Watering Bot</title>
+      <link>https://shacheng.co.uk/2019/11/03/raspberrypi-wateringbot/</link>
+      <pubDate>Sun, 03 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://shacheng.co.uk/2019/11/03/raspberrypi-wateringbot/</guid>
+      <description>V1 - The Minimum Viable Product Circuit Design
+ Implementation
+ Features
+ Automatically water plant on schedule Enable extra watering using a switch Log watering history  Code
+WaterPump.py
+ V2 - Water Level Detector Circuit Design
+Missing
+Code
+WaterPump_v2.py
+ V3 - Mobile Message (Twilio) Code
+Missing
+ V4 - Migrated to ESP8266 Circuit Desgin
+Missing
+Extra Features
+ Soil Humidity Sensor Remote monitor and control via Blynk  Code</description>
+    </item>
+    
+    <item>
+      <title>Setup Raspberry Pi (headless)</title>
+      <link>https://shacheng.co.uk/2019/11/01/setup-raspberry-pi/</link>
+      <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://shacheng.co.uk/2019/11/01/setup-raspberry-pi/</guid>
+      <description>Prerequisite Download Raspbian image from link (I used Raspbian Buster Lite zip version, BanelaEtcher can write from zip)
+Download BanelaEtcher for writing image to micro SD from link
+Micro SD (Samsung 32GB with adapter) link
+Install tools in your PC (Windows): Putty (access Raspberry Pi headless using SSH)
+Bonjour
+Notepad++
+Steps Install operating system   Plug SD card into computer (Win 10), use BanelaEtcher write Raspbian to micro SD</description>
+    </item>
+    
   </channel>
 </rss>
