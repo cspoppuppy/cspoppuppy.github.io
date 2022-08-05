@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Database on </title>
+    <link>http://blog.github.io/tags/database/</link>
+    <description>Recent content in Database on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 07 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://blog.github.io/tags/database/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>London Oyster Card - ER Model</title>
+      <link>http://blog.github.io/2021/04/07/london-oyster-card-er/</link>
+      <pubDate>Wed, 07 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.github.io/2021/04/07/london-oyster-card-er/</guid>
+      <description>Objective
+Record information:
+Basic user information: name, address Basic Oyster card information: card id, create date, card type, balance Trips: travel from, touch in date and time, travel to, touch out date and time, fare Dummy data
+ The technique to produce ER model from the example data is called normalisation. The most popular choice is 3rd Normal Form. It is a 3 steps process, each step depends on the completion of the previous step and progressively transforming the data.</description>
+    </item>
+    
+  </channel>
+</rss>

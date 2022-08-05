@@ -2,17 +2,95 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://blog.github.io/posts/mypost/</loc>
-    <lastmod>2022-08-02T23:07:18+01:00</lastmod>
-  </url><url>
-    <loc>http://blog.github.io/posts/</loc>
-    <lastmod>2022-08-02T23:07:18+01:00</lastmod>
-  </url><url>
     <loc>http://blog.github.io/</loc>
-    <lastmod>2022-08-02T23:07:18+01:00</lastmod>
+    <lastmod>2021-04-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://blog.github.io/categories/</loc>
+    <lastmod>2021-04-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://blog.github.io/tags/computer-science/</loc>
+    <lastmod>2021-04-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://blog.github.io/tags/electronics/</loc>
+    <lastmod>2021-04-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://blog.github.io/2021/04/30/how-computer-add-numbers/</loc>
+    <lastmod>2021-04-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://blog.github.io/post/</loc>
+    <lastmod>2021-04-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://blog.github.io/tags/</loc>
+    <lastmod>2021-04-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://blog.github.io/categories/tech/</loc>
+    <lastmod>2021-04-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://blog.github.io/tags/data-engineering/</loc>
+    <lastmod>2021-04-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://blog.github.io/tags/database/</loc>
+    <lastmod>2021-04-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://blog.github.io/2021/04/07/london-oyster-card-er/</loc>
+    <lastmod>2021-04-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://blog.github.io/tags/algorithm/</loc>
+    <lastmod>2021-03-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://blog.github.io/tags/math/</loc>
+    <lastmod>2021-03-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://blog.github.io/tags/quiz/</loc>
+    <lastmod>2021-03-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://blog.github.io/2021/03/07/sum-of-digits/</loc>
+    <lastmod>2021-03-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://blog.github.io/tags/ai/</loc>
+    <lastmod>2021-01-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://blog.github.io/tags/board-game/</loc>
+    <lastmod>2021-01-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://blog.github.io/tags/javascript/</loc>
+    <lastmod>2021-01-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://blog.github.io/2021/01/12/unbeatable-noughts-crosses/</loc>
+    <lastmod>2021-01-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://blog.github.io/2020/12/30/estimate-pi/</loc>
+    <lastmod>2020-12-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://blog.github.io/tags/web-development/</loc>
+    <lastmod>2020-12-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://blog.github.io/2020/12/23/is-2021-a-prime-number/</loc>
+    <lastmod>2020-12-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://blog.github.io/tags/python/</loc>
+    <lastmod>2020-12-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://blog.github.io/2020/12/23/sum-of-consecutive-odd-numbers/</loc>
+    <lastmod>2020-12-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://blog.github.io/2016/09/15/chinese-zither-tuning-for-dummies/</loc>
+    <lastmod>2014-03-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://blog.github.io/categories/life/</loc>
+    <lastmod>2014-03-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://blog.github.io/tags/music/</loc>
+    <lastmod>2014-03-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://blog.github.io/about/</loc>
+  </url><url>
+    <loc>http://blog.github.io/demo/</loc>
+  </url><url>
+    <loc>http://blog.github.io/search/placeholder/</loc>
+  </url><url>
+    <loc>http://blog.github.io/archive/</loc>
+  </url><url>
+    <loc>http://blog.github.io/search/</loc>
   </url>
 </urlset>

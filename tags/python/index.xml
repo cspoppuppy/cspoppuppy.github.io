@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on </title>
+    <link>http://blog.github.io/tags/python/</link>
+    <description>Recent content in Python on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 23 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://blog.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Is 2021 A Prime Number?</title>
+      <link>http://blog.github.io/2020/12/23/is-2021-a-prime-number/</link>
+      <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.github.io/2020/12/23/is-2021-a-prime-number/</guid>
+      <description>A prime number is a positive integer that can only be exactly divided by itself and 1.
+Algorithm: to judge whether X is a prime number or not, we can assume a number n has n x n = X (n = sqrt(X)). If X is not prime, it will have at least one integer pair n1 and n2, such that n1 x n2 = X, n1∈[2,n], n2∈[n,X]. We can then narrow down the scope that if X is exactly divisible by a number between 2 and sqrt(X), it is not a prime; otherwise, it is a prime.</description>
+    </item>
+    
+  </channel>
+</rss>

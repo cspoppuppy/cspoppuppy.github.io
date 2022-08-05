@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algorithm on </title>
+    <link>http://blog.github.io/tags/algorithm/</link>
+    <description>Recent content in Algorithm on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://blog.github.io/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sum Of Digits</title>
+      <link>http://blog.github.io/2021/03/07/sum-of-digits/</link>
+      <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.github.io/2021/03/07/sum-of-digits/</guid>
+      <description>Sum all the digits of number N (&amp;gt;0), if result has more than one digit, repeat summing all the digits of the result of each round, until reaching a single digit number R.
+For example:
+$$N = 365 =&amp;gt; 3 + 6 + 5 = 14 =&amp;gt; R = 1 + 4 = 5 $$
+Algorithm: $$R = (N – 1) mod 9 + 1$$
+Proof
+Represent each digit in N as a_{k}</description>
+    </item>
+    
+    <item>
+      <title>Unbeatable Noughts &amp; Crosses</title>
+      <link>http://blog.github.io/2021/01/12/unbeatable-noughts-crosses/</link>
+      <pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.github.io/2021/01/12/unbeatable-noughts-crosses/</guid>
+      <description>The AI algorithm Minimax is used to decide the next best move in two player games like chess and go zero-sum games. It goes through all the possible moves between two players, and scores each simulated game result according to the end status:
+ If the AI player wins, it is given a positive score If the opponent player wins, it is given a negative score If it is a draw, it is given score 0  The scores will be rolled up to their upper level nodes:</description>
+    </item>
+    
+    <item>
+      <title>Is 2021 A Prime Number?</title>
+      <link>http://blog.github.io/2020/12/23/is-2021-a-prime-number/</link>
+      <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.github.io/2020/12/23/is-2021-a-prime-number/</guid>
+      <description>A prime number is a positive integer that can only be exactly divided by itself and 1.
+Algorithm: to judge whether X is a prime number or not, we can assume a number n has n x n = X (n = sqrt(X)). If X is not prime, it will have at least one integer pair n1 and n2, such that n1 x n2 = X, n1∈[2,n], n2∈[n,X]. We can then narrow down the scope that if X is exactly divisible by a number between 2 and sqrt(X), it is not a prime; otherwise, it is a prime.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web Development on </title>
+    <link>http://blog.github.io/tags/web-development/</link>
+    <description>Recent content in Web Development on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 30 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://blog.github.io/tags/web-development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Estimate Pi</title>
+      <link>http://blog.github.io/2020/12/30/estimate-pi/</link>
+      <pubDate>Wed, 30 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.github.io/2020/12/30/estimate-pi/</guid>
+      <description>Area of square: $$S_s = L*L$$
+Area of circle: $$S_c = Pi*(L/2)2$$
+ Draw random dots, with sufficient dots, the probability of dots appearing in the circle approaximately equals the area of the circle within the area of the square:
+$$N_c ⁄ N_c ≈ S_c ⁄ S_s = (Pi*(L/2)2) ⁄ (L*L)$$
+$$=&amp;gt; Pi = N_c ⁄ N_s *4 $$
+Play the demo here
+Code in Github</description>
+    </item>
+    
+  </channel>
+</rss>
