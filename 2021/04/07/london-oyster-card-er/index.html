@@ -15,9 +15,9 @@
     
 
     
-    <meta name="title" content="London Oyster Card - ER Model" />
-    <meta property="og:title" content="London Oyster Card - ER Model" />
-    <meta property="twitter:title" content="London Oyster Card - ER Model" />
+    <meta name="title" content="ER Modelling" />
+    <meta property="og:title" content="ER Modelling" />
+    <meta property="twitter:title" content="ER Modelling" />
     
 
     
@@ -34,7 +34,7 @@
     <meta name="keyword"  content="程莎, Sha Cheng, Data Engineer">
     <link rel="shortcut icon" href="/img/profile.jpeg">
 
-    <title>London Oyster Card - ER Model | Sha Cheng</title>
+    <title>ER Modelling | Sha Cheng</title>
 
     <link rel="canonical" href="/2021/04/07/london-oyster-card-er/">
 
@@ -181,8 +181,8 @@
                         </a>
                         
                     </div>
-                    <h1>London Oyster Card - ER Model</h1>
-                    <h2 class="subheading"></h2>
+                    <h1>ER Modelling</h1>
+                    <h2 class="subheading">Case - London Oyster Card (simplified)</h2>
                     <span class="meta">
                         
                             Posted by 
@@ -218,15 +218,17 @@
                 
                 <p><strong>Objective</strong></p>
 <p>Record information:</p>
-<p>Basic user information: name, address
-Basic Oyster card information: card id, create date, card type, balance
-Trips: travel from, touch in date and time, travel to, touch out date and time, fare
-Dummy data</p>
+<ul>
+<li>User information: name, address</li>
+<li>Oyster card information: card id, create date, card type, balance</li>
+<li>Trips: travel from, touch in date and time, travel to, touch out date and time, fare
+Dummy data</li>
+</ul>
 <p>
   <img src="/img/post/london-oyster-card-er/sample-data-1.png" alt="">
 
 </p>
-<p>The technique to produce ER model from the example data is called normalisation. The most popular choice is 3rd Normal Form. It is a 3 steps process, each step depends on the completion of the previous step and progressively transforming the data.</p>
+<p>3rd Normal Form is used below to normalise the data. It is a 3 steps process, each step depends on the completion of the previous step and progressively transforming the data.</p>
 <p><strong>1st Normal Form: Atomicity</strong></p>
 <p>The principle of 1st normal form is each field should only have singular value (avoid delimiters). From the data above, the address column and trips column are not atomic.</p>
 <p>For the address column, it can be consistently split into 3 columns: street, city, postcode.</p>
@@ -270,7 +272,7 @@ Dummy data</p>
   <img src="/img/post/london-oyster-card-er/3rd-address.png" alt="">
 
 </p>
-<p>Now, we have our ER model!</p>
+<p>Now, we have our ER model.</p>
 <p>
   <img src="/img/post/london-oyster-card-er/er.png" alt="">
 
@@ -291,7 +293,7 @@ Dummy data</p>
                     
                     
                     <li class="next">
-                        <a href="/2021/04/30/how-computer-add-numbers/" data-toggle="tooltip" data-placement="top" title="How Computer Add Numbers">Next
+                        <a href="/2021/04/30/simulating-how-computer-add-numbers/" data-toggle="tooltip" data-placement="top" title="Simulating How Computers Add Numbers">Next
                             Post &rarr;</a>
                     </li>
                     

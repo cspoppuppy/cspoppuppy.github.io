@@ -15,9 +15,9 @@
     
 
     
-    <meta name="title" content="Computer Science" />
-    <meta property="og:title" content="Computer Science" />
-    <meta property="twitter:title" content="Computer Science" />
+    <meta name="title" content="Simulating How Computers Add Numbers" />
+    <meta property="og:title" content="Simulating How Computers Add Numbers" />
+    <meta property="twitter:title" content="Simulating How Computers Add Numbers" />
     
 
     
@@ -34,9 +34,9 @@
     <meta name="keyword"  content="程莎, Sha Cheng, Data Engineer">
     <link rel="shortcut icon" href="/img/profile.jpeg">
 
-    <title>Computer Science | Sha Cheng</title>
+    <title>Simulating How Computers Add Numbers | Sha Cheng</title>
 
-    <link rel="canonical" href="/tags/computer-science/">
+    <link rel="canonical" href="/2021/04/30/simulating-how-computer-add-numbers/">
 
     
     
@@ -157,14 +157,45 @@
 
 
 
-<header class="intro-header" style="background-image: url('/img/home-bg-jeep.jpg')">
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/header/tech.jpeg')
+    }
+</style>
+
+<header class="intro-header" >
+
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1> </h1>
-                    
-		    <span class="subheading">The most beautiful experience we can have is the mysterious.</span>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/computer-science" title="Computer Science">
+                            Computer Science
+                        </a>
+                        
+                        <a class="tag" href="/tags/electronics" title="Electronics">
+                            Electronics
+                        </a>
+                        
+                    </div>
+                    <h1>Simulating How Computers Add Numbers</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                Sha Cheng
+                             
+                            on 
+                            Friday, April 30, 2021
+                            
+                            
+                            
+                            
+                    </span>
                 </div>
             </div>
         </div>
@@ -173,142 +204,176 @@
 
 
 
-  
-<div class="container">
-    <div class="row">
-        
-        
-   	    <div class="
-            col-lg-8 col-lg-offset-1
-            col-md-8 col-md-offset-1
-            col-sm-12
-            col-xs-12
-            post-container
-        ">
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <p>A hardware simulation of 4-bit numbers adder.</p>
+<p>How the addition operates in binary – example: 6 (A)+7 (B) = 13 (C):</p>
+<p>
+  <img src="/img/post/computer-add-numbers/HardwareAdder002.png" alt="">
+
+</p>
+<p>Below is a hardware logic diagram of a full adder, which is used to do 1-bit additions. It uses 5 logic gates, each made out of 4-6 transistors.</p>
+<p>
+  <img src="/img/post/computer-add-numbers/image003.png" alt="">
+
+</p>
+<p>There are also other ways to combine different logic gates to produce a full adder.</p>
+<p>To operate 4-bit additions, it requires roughly 4 full adders connecting like below.</p>
+<p>
+  <img src="/img/post/computer-add-numbers/image004.jpeg" alt="">
+
+</p>
+<p>It starts by adding the lowest digits of the two binary numbers and an initial carry 0. When the sum is no more than 1, it will set the result digit to the sum. When the sum is above 1, it carries 1 into the upper digits adder, and keep the reminder as the result digit.</p>
+<p>I used an Electronic Design Automation (EDA) software describing the circuit with Verilog (a hardware description language). It can be programmed into a FPGA (Field Programmable Gate Array) and physically form the logic gates by connecting the circuit with the embedded transistors and wires.</p>
+<p>
+  <img src="/img/post/computer-add-numbers/image005.jpeg" alt="">
+
+</p>
+<p>This is a micro reflection of how computer chips are designed/produced. Modern computer chips have tens of billions of transistors, and wire them together in a tiny board, taking care of the interference between the components and the amount of heat they generate.</p>
+
+
+                
+
+                
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2021/04/07/london-oyster-card-er/" data-toggle="tooltip" data-placement="top" title="ER Modelling">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                </ul>
+                
+
+                
+
+
+<script src="https://giscus.app/client.js"
+        data-repo="cspoppuppy/web-comments"
+        data-repo-id="R_kgDOHxiSmQ"
+        data-category="General"
+        data-category-id="DIC_kwDOHxiSmc4CQpEo"
+        data-mapping="pathname"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
             
 
-<div class="post-preview">
-    <a href="https://shacheng.co.uk/2021/04/30/simulating-how-computer-add-numbers/">
-        <h2 class="post-title">
-            Simulating How Computers Add Numbers
-        </h2>
-	
-        <div class="post-content-preview">
-	
-            A hardware simulation of 4-bit numbers adder.
-How the addition operates in binary – example: 6 (A)+7 (B) = 13 (C):
- Below is a hardware logic diagram of a full adder, which is used to do 1-bit additions. It uses 5 logic gates, each made out of 4-6 transistors.
- There are also other ways to combine different logic gates to produce a full adder.
-To operate 4-bit additions, it requires roughly 4 full adders connecting like below.
-       
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/algorithm" title="algorithm">
+                            algorithm
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/electronics" title="electronics">
+                            electronics
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/javascript" title="javascript">
+                            javascript
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/math" title="math">
+                            math
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/python" title="python">
+                            python
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/quiz" title="quiz">
+                            quiz
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/raspberry-pi" title="raspberry-pi">
+                            raspberry-pi
+                        </a>
+                        
+                        
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+            </div>
         </div>
-    </a>
-    <p class="post-meta">
-    
-        Posted by Sha Cheng on Friday, April 30, 2021
-        
-        
-    
-    </p>
-
-</div>
-<hr>
-
-
-            
-
-
-
-       	</div>
-        
-
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-	
-    
-    
-    
-    
-    <section>
-        <hr class="hidden-sm hidden-xs">
-        <h5>FEATURED TAGS</h5>
-        <div class="tags">
-            
-            
-               
-            
-               
-                    <a href="/tags/algorithm" title="algorithm">
-                        algorithm
-                    </a>
-               
-            
-               
-            
-               
-            
-               
-            
-               
-            
-               
-                    <a href="/tags/electronics" title="electronics">
-                        electronics
-                    </a>
-               
-            
-               
-                    <a href="/tags/javascript" title="javascript">
-                        javascript
-                    </a>
-               
-            
-               
-                    <a href="/tags/math" title="math">
-                        math
-                    </a>
-               
-            
-               
-            
-               
-                    <a href="/tags/python" title="python">
-                        python
-                    </a>
-               
-            
-               
-                    <a href="/tags/quiz" title="quiz">
-                        quiz
-                    </a>
-               
-            
-               
-                    <a href="/tags/raspberry-pi" title="raspberry-pi">
-                        raspberry-pi
-                    </a>
-               
-            
-               
-            
-        </div>
-    </section>
-    
-
-    
-    
-    
-</div>
-
-	</div>
-</div>
-
+    </div>
+</article>
 
 
 

@@ -8,11 +8,11 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 30 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://shacheng.co.uk/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>How Computer Add Numbers</title>
-      <link>https://shacheng.co.uk/2021/04/30/how-computer-add-numbers/</link>
+      <title>Simulating How Computers Add Numbers</title>
+      <link>https://shacheng.co.uk/2021/04/30/simulating-how-computer-add-numbers/</link>
       <pubDate>Fri, 30 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://shacheng.co.uk/2021/04/30/how-computer-add-numbers/</guid>
+      <guid>https://shacheng.co.uk/2021/04/30/simulating-how-computer-add-numbers/</guid>
       <description>A hardware simulation of 4-bit numbers adder.
 How the addition operates in binary – example: 6 (A)+7 (B) = 13 (C):
  Below is a hardware logic diagram of a full adder, which is used to do 1-bit additions. It uses 5 logic gates, each made out of 4-6 transistors.
@@ -21,15 +21,15 @@ To operate 4-bit additions, it requires roughly 4 full adders connecting like be
     </item>
     
     <item>
-      <title>London Oyster Card - ER Model</title>
+      <title>ER Modelling</title>
       <link>https://shacheng.co.uk/2021/04/07/london-oyster-card-er/</link>
       <pubDate>Wed, 07 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://shacheng.co.uk/2021/04/07/london-oyster-card-er/</guid>
       <description>Objective
 Record information:
-Basic user information: name, address Basic Oyster card information: card id, create date, card type, balance Trips: travel from, touch in date and time, travel to, touch out date and time, fare Dummy data
- The technique to produce ER model from the example data is called normalisation. The most popular choice is 3rd Normal Form. It is a 3 steps process, each step depends on the completion of the previous step and progressively transforming the data.</description>
+ User information: name, address Oyster card information: card id, create date, card type, balance Trips: travel from, touch in date and time, travel to, touch out date and time, fare Dummy data   3rd Normal Form is used below to normalise the data. It is a 3 steps process, each step depends on the completion of the previous step and progressively transforming the data.
+1st Normal Form: Atomicity</description>
     </item>
     
     <item>
